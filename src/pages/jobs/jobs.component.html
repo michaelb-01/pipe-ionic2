@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Jobs
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="add-chat-button">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+      <button ion-button icon-only class="options-button">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+	<div *ngFor="let job of jobs | async" class="jobCard">
+		<job-card [job]="job"></job-card>
+	</div>
+</ion-content>
